@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spalone paliwo w litrach [L]"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/spal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ilość przejechanych kilometrów [km]"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/ilee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <Switch
+            android:id="@+id/swcena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:splitTrack="false"
+            android:onClick="switchclick"
+            android:text="Obliczyć cenę spalonego paliwa na 100km?"
+            tools:checked="false" />
+
+        <TextView
+            android:id="@+id/tvcena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cena paliwa [zł]"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/cen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oblicz spalanie na 100km"
+            android:onClick="licz"/>
+
+        <TextView
+            android:id="@+id/txtspal100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:lines="2" />
+
+        <TextView
+            android:id="@+id/txtkosz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:lines="2"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:onClick="czysc"
+            app:srcCompat="@drawable/fuelicon" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
